@@ -136,6 +136,8 @@ const Setting = ({navigation})=>
                      <TouchableOpacity><Image source={require('../../asset/right-arrow.png')} style={StyleView.image}>
                         </Image>
                     </TouchableOpacity>
+                    <Text>aadsf</Text>
+                    <Text>aadsf</Text>
                 </View>
         </View>
     </View>
