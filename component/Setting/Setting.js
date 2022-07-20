@@ -135,9 +135,7 @@ const Setting = ({navigation})=>
                      <View style = {{flex:1}}></View>
                      <TouchableOpacity><Image source={require('../../asset/right-arrow.png')} style={StyleView.image}>
                         </Image>
-                    </TouchableOpacity>
-                    <Text>aadsf</Text>
-                    <Text>aadsf</Text>
+                    </TouchableOpacity>    
                 </View>
         </View>
     </View>

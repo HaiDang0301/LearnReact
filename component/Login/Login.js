@@ -23,7 +23,7 @@ const Login = ({navigation}) =>
             alignItems:'center',
             flex:1
             }}>
-                <TouchableOpacity style = {StyleView.touch} onPress = {()=>navigation.navigate('Setting')}>
+                <TouchableOpacity style = {StyleView.touch} onPress = {()=>navigation.navigate('FoodList')}>
                     <Text style = {StyleView.texttouch}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={()=>navigation.navigate('Register')}>
