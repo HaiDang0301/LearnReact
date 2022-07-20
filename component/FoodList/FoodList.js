@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { View, Text, ImageBackground, Image, ScrollView } from "react-native";
+import { View, Text, ImageBackground, Image, ScrollView, TouchableOpacity } from "react-native";
 import { StyleView } from '../FoodList/Styles';
 import FoodItems from "./FoodItems";
-const FoodList = (props) => {
+const FoodList = ({navigation}) => {
     const [food, setFoods] = useState(
         [
             {
@@ -39,6 +39,9 @@ const FoodList = (props) => {
     )
     return <ImageBackground style={{ flex: 6}} 
             source = {require('../../asset/food.png')}>
+                <View style = {{height:50}}>
+                    <Text>Haaloo</Text>
+                </View>
         <View style={{ justifyContent: 'center', alignItems: 'center' }}>
             <Text style={{ color: 'black', fontFamily: 'boid',fontSize:20 }}>FoodList</Text>
         </View>
@@ -48,6 +51,20 @@ const FoodList = (props) => {
                     return <FoodItems food = {eachFood}></FoodItems>
                 })}
         </ScrollView>
+        <View style = {{height:50,flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+            <TouchableOpacity onPress={()=>navigation.navigate('FoodList')}>
+                <Image source={require('../../asset/fast-food.png')} style = {{height:40,width:40,marginTop:5}}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Image source={require('../../asset/chat.png')} style = {{height:40,width:40,marginTop:5,marginLeft:50}}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>navigation.navigate('Setting')}>
+                <Image source={require('../../asset/settings.png')} style = {{height:40,width:40,marginTop:5,marginLeft:50}}></Image>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <Image source={require('../../asset/teamwork.png')} style = {{height:40,width:40,marginTop:5,marginLeft:50}}></Image>
+            </TouchableOpacity>
+        </View>
     </ImageBackground>
 }
 export default FoodList
